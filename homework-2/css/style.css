@@ -1,0 +1,198 @@
+@import url("https://use.typekit.net/uyi1vod.css");
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+
+body {
+    margin: 0;
+    width: 1920px;
+    height: 2280px;
+    position: relative;
+    box-sizing: border-box;
+    text-align: center;
+    color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#content {
+    height: 1280px;
+    background-image: url("../img/background.png");
+}
+
+header {
+    width: 1723px;
+    height: 117px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+    margin: auto;
+    padding-top: 60px;
+}
+
+header p {
+    word-spacing: 48px;
+    display: inline-block;
+}
+
+header > a {
+    float: right;
+    padding-top: 20px;
+}
+
+header > a:last-child {
+    margin-right: 40px;
+}
+
+header > a:first-child {
+    float:left;
+}
+
+main {
+    width: 733px;
+    height: 667px;
+    margin: auto;
+}
+
+main > p {
+    font-family: Montserrat;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 34px;
+    margin-bottom: 90px;
+}
+
+main > p:first-of-type {
+    font-family: PlayfairDisplay;
+    font-size: 140px;
+    font-weight: 400;
+    margin-top: 300px;
+}
+
+#really {
+    margin: auto;
+    width: 163px;
+    height: 36px;
+    position: relative;
+    background-color: #da7074;
+    padding-top: 10px;
+    border-radius: 50px;
+    z-index: 1;
+}
+
+.article {
+    width: 480px;
+    height: 500px;
+    display: inline-block;
+    box-sizing: border-box;
+    float: left;
+    text-align: left;
+}
+
+.article img {
+    position: absolute;
+}
+
+#articles .article  p {
+    font-family: Georgia;
+    font-size: 18px;
+    position: absolute;
+    padding-top: 320px;
+    padding-left: 150px;
+    text-align: center;
+    font-style: italic;
+}
+
+#articles .article > p::first-line {
+    font-family: Montserrat;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+#about .article {
+    width: 70px;
+    padding-top: 90px;
+    margin-left: 330px;
+
+}
+
+#about .article:first-child {
+    margin-left: 200px;
+}
+
+#about .article:last-child {
+    width: 439px;
+}
+
+#about .article:last-child p:last-child {
+    font-family: Georgia;
+    color:#565656;
+    font-style: italic;
+    line-height: 26px;
+}
+
+#about .article p {
+    font-family: Montserrat;
+    color:#141515;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 26px;
+    margin-bottom: 20px;
+}
+
+#about .article p:first-child {
+    width: 120px;
+}
+
+#about .article a {
+    font-family: Georgia;
+    color:#565656;
+    font-style: italic;
+    line-height: 26px;
+}
+
+#footer {
+    background-color: #000000;
+    width: 1920px;
+    height: 96px;
+    position: absolute;
+    bottom: 0px;
+}
+
+#footer p {
+    font-family: Georgia;
+    font-size: 12px;
+    font-style: italic;
+    line-height: 24px;
+    padding-top: 20px;
+}
+
+.line-vertical {
+    width: 1px;
+    height: 190px;
+    position: relative;
+    bottom: 100px;
+    left: 70px;
+    background-color: #da7074;
+}
+
+.line-vertical:first-of-type {
+    width: 1px;
+    height: 190px;
+    left: 75px;
+    top: 110px;
+    background-color: #da7074;
+}
+
+.line-horizontal {
+    width: 449px;
+    margin: auto;
+    height: 1px;
+    position: relative;
+    right: 88%;
+    bottom: 388px;
+    z-index: -1;
+    background-color: #da7074;
+}

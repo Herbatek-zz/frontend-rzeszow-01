@@ -4,65 +4,121 @@
 <head>
     <title>Front-end Rzeszów</title>
     <meta charset="utf-8" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-    <header id="header">
-        <h1>Hello World</h1>
-    </header>
+    <section id="content">
+        <header>
+            <a href="#"><img src="img/logo.png"></a>
+            <p>
+                <a href="#">HOME</a>
+                <a href="#">ABOUT</a>
+                <a href="#">CONTACT</a>
+            </p>
+            <a href="#"><img src="img/hamburger.png" /></a>
+            <a href="#"><img src="img/search.png"/></a>
+        </header>
+        <main>
+            <p>
+                Web Design
+            </p>
+            <p>
+                Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum , ut fermentum massa justo sit amet erat a ante venenatis dapibus posuere velit
+            </p>
+            <section id="really">
+                <a href="#">REALLY?</a>
+                <div class="line-vertical">
+                </div>
+                <div class="line-vertical">
+                </div>
 
-    <main id="container">
-        <section id="articles">
-            <article class="article">
-                <header>
-                    <h3>First article</h3>
-                </header>
+                <div class="line-horizontal">
+                </div>
+            </section>
+        </main>
+        <a href="#"><img src="img/playBtn.png"/></a>
+    </section>
 
-                <main>
-                    <p>Check my <a href="https://www.linkedin.com/in/piotr-cu%C5%BCytek-967530155/">LinkedIn</a> profile.</p>
-                    <a href="https://www.linkedin.com/in/piotr-cu%C5%BCytek-967530155/">
-                        <img src="images/linkedid.png" alt="linkedin-logo"/>
-                    </a>
-                </main>
+    <section id="articles">
+        <article class="article">
+            <img src="img/img1.png" />
+                <p>
+                    Amet Condimentum <br />
+                    Dolor
+                </p>
+        </article>
+        <article class="article">
+            <img src="img/img2.png" />
+            <p>
+                Lorem Cursus<br />
+                Ligula
+            </p>
+        </article>
+        <article class="article">
+            <img src="img/img3.png" />
+            <p>
+                Condimentum Ultricies<br />
+                Consectetur
+            </p>
+        </article>
+        <article class="article">
+            <img src="img/img4.png" />
+            <p>
+                Ridiculus Ornare<br />
+                Ullamcorper
+            </p>
+        </article>
+    </section>
 
-                <footer>
-                    <p>Posted on <time datetime="2018-03-09 23:40">2018-03-09 23:40</time></p>
-                </footer>
-            </article>
-            <article class="article">
-                <header>
-                    <h3>Second article</h3>
-                </header>
+    <section id="about">
+        <article class="article">
+            <p>
+                Follow us
+            </p>
+            <a href="#">Twitter</a>
+            <a href="#">Faceboook</a>
+            <a href="#">Linkedin</a>
+            <a href="#">Pinterest</a>
+            <a href="#">YouTube</a>
+        </article>
+        <article class="article">
+            <p>
+                Get To know us
+            </p>
+            <a href="#">About</a>
+            <a href="#">Policies</a>
+            <a href="#">Careers</a>
+            <a href="#">Press</a>
+            <a href="#">Developers</a>
 
-                <main>
-                    <p>Check my <a href="https://github.com/Herbatek">GitHub</a> profile.</p>
-                    <a href="https://github.com/Herbatek"><img src="images/git.png" alt="git-logo" /></a>
-                </main>
+        </article>
+        <article class="article">
+            <p>
+                Locations
+            </p>
+            <a href="#">Detroit</a>
+            <a href="#">London</a>
+            <a href="#">Florida</a>
+            <a href="#">Las Vegas</a>
+            <a href="#">California</a>
 
-                <footer>
-                    <p>Posted on <time datetime="2018-03-09 23:43">2018-03-09 23:43</time></p>
-                </footer>
-            </article>
-        </section>
-
-        <section id="contact">
-            <form method="post">
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" maxlength="200" placeholder="Enter subject..." required/>
-                <br />
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" maxlength="60" placeholder="Enter email..." required />
-                <br />
-                <label for="message">Message</label>
-                <textarea name="message" id="message" cols="60" rows="10" maxlength="1600" placeholder="Enter your message here..." required></textarea>
-                <br />
-                <button type="submit">Send</button>
-            </form>
-        </section>
-    </main>
+        </article>
+        <article class="article">
+            <p>
+                Our Mission
+            </p>
+            <p>
+                Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+                Sed posuere consectetur
+            </p>
+        </article>
+    </section>
 
     <footer id="footer">
-        <p>Author: Piotr Cużytek</p>
+        <p>
+            Copyright &copy; 2016 &#64;samiralley
+        </p>
     </footer>
 </body>
 
