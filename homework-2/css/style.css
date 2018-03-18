@@ -24,22 +24,27 @@ a {
     background-image: url("../img/background.png");
 }
 
+#content > a > img {
+    margin-top: 60px;
+}
+
 header {
     width: 1723px;
     height: 117px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.24);
     margin: auto;
-    padding-top: 60px;
+    padding-top: 70px;
 }
 
 header p {
-    word-spacing: 48px;
+    word-spacing: 50px;
+    margin-left: 50px;
     display: inline-block;
 }
 
 header > a {
     float: right;
-    padding-top: 20px;
+    margin-top: 10px
 }
 
 header > a:last-child {
@@ -68,7 +73,9 @@ main > p:first-of-type {
     font-family: PlayfairDisplay;
     font-size: 140px;
     font-weight: 400;
-    margin-top: 300px;
+    margin-top: 240px;
+    line-height: normal;
+    margin-bottom: 5px;
 }
 
 #really {
@@ -100,42 +107,37 @@ main > p:first-of-type {
     font-size: 18px;
     position: absolute;
     padding-top: 320px;
-    padding-left: 150px;
+    padding-left: 160px;
+    line-height: 30px;
     text-align: center;
     font-style: italic;
 }
 
-#articles .article > p::first-line {
+#articles .article > p:first-line {
     font-family: Montserrat;
     font-weight: 600;
     line-height: 30px;
+    font-style: normal;
 }
 
 #about .article {
     width: 70px;
     padding-top: 90px;
-    margin-left: 330px;
+    margin-left: 310px;
 
 }
 
 #about .article:first-child {
-    margin-left: 200px;
+    margin-left: 210px;
 }
 
 #about .article:last-child {
-    width: 439px;
-}
-
-#about .article:last-child p:last-child {
-    font-family: Georgia;
-    color:#565656;
-    font-style: italic;
-    line-height: 26px;
+    width: 365px;
 }
 
 #about .article p {
     font-family: Montserrat;
-    color:#141515;
+    color:#151515;
     font-size: 14px;
     font-weight: 700;
     line-height: 26px;
@@ -146,9 +148,18 @@ main > p:first-of-type {
     width: 120px;
 }
 
+#about .article:last-child p:last-child {
+    font-family: Georgia;
+    color:#575757;
+    font-style: italic;
+    line-height: 26px;
+    font-weight: 400;
+}
+
 #about .article a {
     font-family: Georgia;
     color:#565656;
+    font-weight: 400;
     font-style: italic;
     line-height: 26px;
 }
