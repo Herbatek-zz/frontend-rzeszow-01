@@ -89,6 +89,35 @@ main > p:first-of-type {
     z-index: 1;
 }
 
+
+.line-vertical {
+    width: 1px;
+    height: 190px;
+    position: relative;
+    bottom: 100px;
+    left: 70px;
+    background-color: #da7074;
+}
+
+.line-vertical:first-of-type {
+    width: 1px;
+    height: 190px;
+    left: 75px;
+    top: 110px;
+    background-color: #da7074;
+}
+
+.line-horizontal {
+    width: 449px;
+    margin: auto;
+    height: 1px;
+    position: relative;
+    right: 88%;
+    bottom: 388px;
+    z-index: -1;
+    background-color: #da7074;
+}
+
 .article {
     width: 480px;
     height: 500px;
@@ -124,7 +153,6 @@ main > p:first-of-type {
     width: 70px;
     padding-top: 90px;
     margin-left: 310px;
-
 }
 
 #about .article:first-child {
@@ -178,32 +206,4 @@ main > p:first-of-type {
     font-style: italic;
     line-height: 24px;
     padding-top: 20px;
-}
-
-.line-vertical {
-    width: 1px;
-    height: 190px;
-    position: relative;
-    bottom: 100px;
-    left: 70px;
-    background-color: #da7074;
-}
-
-.line-vertical:first-of-type {
-    width: 1px;
-    height: 190px;
-    left: 75px;
-    top: 110px;
-    background-color: #da7074;
-}
-
-.line-horizontal {
-    width: 449px;
-    margin: auto;
-    height: 1px;
-    position: relative;
-    right: 88%;
-    bottom: 388px;
-    z-index: -1;
-    background-color: #da7074;
 }
