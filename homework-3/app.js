@@ -1,20 +1,16 @@
 var counter = (function() {
 
-                var text;
-
-                function getUserInput() {
-                    text = prompt("Wpisz wyraz aby, obliczyć ilość poszczególnych liter");
-                }
+                this.text = prompt("Podaj wyraz, w którym chcesz obliczyć liczbę poszczególnych liter");
 
                 function showResult() {
-                    console.log(countLetters(text));
+                    console.log(countLetters(this.text));
                 }
 
                 function countLetters() {
                     let map = new Map();
 
-                    for(var i = 0; i < text.length; i++) {
-                        var currentChar = text.charAt(i);
+                    for(var i = 0; i < this.text.length; i++) {
+                        var currentChar = this.text.charAt(i);
                         if(map.has(currentChar))
                             map.set(currentChar, map.get(currentChar) + 1);
                         else
@@ -24,10 +20,8 @@ var counter = (function() {
                 }
 
                 return {
-                    getInput: getUserInput,
-                    showResult: showResult
+                    countForMe: showResult
                 }
 })();
 
-counter.getInput();
-counter.showResult();
+counter.countForMe();
