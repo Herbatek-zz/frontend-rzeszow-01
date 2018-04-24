@@ -9,21 +9,22 @@ function createTask() {
 
 function addTask(input) {
     let listItem = createListItem(input);
-    let table = document.querySelector('.table');
-    table.appendChild(listItem);
+    let list = document.querySelector('.list');
+    list.appendChild(listItem);
 }
 
 function createListItem(text) {
-    let listItem = document.createElement('li');
-    let button = createRemoveButton();
+    let divList = document.createElement('div');
+    divList.setAttribute('class', 'task');
+    let removeBtn = createRemoveButton();
 
     let taskText = document.createTextNode(text);
     let pElement = document.createElement('p');
     pElement.appendChild(taskText);
-    listItem.appendChild(pElement);
-    listItem.appendChild(button);
+    divList.appendChild(pElement);
+    divList.appendChild(removeBtn);
 
-    return listItem;
+    return divList;
 }
 
 function createRemoveButton() {
