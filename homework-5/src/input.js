@@ -1,4 +1,4 @@
-class Input {
+export default class Input {
     constructor(text) {
         this.text = text;
         this.type = 'input';
@@ -11,7 +11,3 @@ class Input {
         return input;
     }
 }
-
-const cityInput = new Input("Enter here your city...");
-
-export default cityInput;
