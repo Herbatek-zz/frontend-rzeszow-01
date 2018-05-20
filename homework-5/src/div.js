@@ -1,5 +1,5 @@
 export default class Div {
-    constructior(text) {
+    constructor(text) {
         this.class = text;
         this.type = 'div';
     }

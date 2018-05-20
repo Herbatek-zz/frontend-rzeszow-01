@@ -8,6 +8,8 @@ export default class Input {
         const input = document.createElement(this.type);
         input.setAttribute('type', 'text');
         input.setAttribute('placeholder', this.text);
+        input.required = true;
+        input.autofocus = true;
         return input;
     }
 }
