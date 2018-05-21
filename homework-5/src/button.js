@@ -1,33 +1,50 @@
 import Div from './div';
-//import {readData} from './loadTemperature';
+import TemperatureReader from './temperatureReader';
+import averageTemperature from './averageTemperature';
+import LocalStorage from './localStorage';
 
 class Button {
-    constructor(text, action) {
-        this.text = text;
-        this.type = 'button';
-        this.class = 'addButton';
-        this.action = action;
-    }
+	constructor(text, action) {
+		this.text = text;
+		this.type = 'button';
+		this.action = action;
+	}
 
-    getButton() {
-        const button = document.createElement(this.type);
-        button.innerText = this.text;
-        button.setAttribute('class', this.class);
-        button.addEventListener('click', this.action);
-        return button;
-    }
+	create(className) {
+		const button = document.createElement(this.type);
+		button.innerText = this.text;
+		button.setAttribute('class', className);
+		button.addEventListener('click', this.action);
+		return button;
+	}
 }
 
-const addCityButton = new Button("Add City", () => {
-    const weather = document.querySelector('.weather');
-    const pElement = document.createElement('p');
-    const input = weather.querySelector('input');
-    const cityName = input.value;
+const addCityButton = new Button('Add City', () => {
+	const weather = document.querySelector('.weather');
+	const input = weather.querySelector('input');
+	saveToLocalStorage(input);
 
-    pElement.innerText = cityName;
-    input.value = '';
-    weather.appendChild(pElement);
+	const pElement = document.createElement('p');
+	pElement.innerText = input.value + ' ===> ';
+
+	const tempReader = new TemperatureReader(input.value);
+
+	tempReader.readData(tempReader.getURL()).then(function(data) {
+		pElement.innerText += ' ' + Math.round(averageTemperature(data)) + 'C';
+		input.value = '';
+		const temperatureDiv = new Div().create('cityTemperature');
+		temperatureDiv.appendChild(pElement);
+		weather.appendChild(temperatureDiv);
+	}).catch(function(err) {
+		alert(err);
+	});
+
 
 });
+
+function saveToLocalStorage(input) {
+	const localStorage = new LocalStorage();
+	localStorage.save(input.value);
+}
 
 export default addCityButton;

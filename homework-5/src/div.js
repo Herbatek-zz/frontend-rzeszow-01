@@ -1,12 +1,11 @@
 export default class Div {
-    constructor(text) {
-        this.class = text;
-        this.type = 'div';
-    }
+	constructor() {
+		this.type = 'div';
+	}
 
-    getDiv() {
-        const div = document.createElement(this.type);
-        div.setAttribute('class', this.class);
-        return div;
-    }
+	create(className) {
+		const div = document.createElement(this.type);
+		div.setAttribute('class', className);
+		return div;
+	}
 }

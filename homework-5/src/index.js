@@ -4,23 +4,22 @@ import Input from './input';
 import Div from './div';
 
 if (process.env.NODE_ENV !== 'production') {
-    console.log('Looks like we are in development mode!');
+	console.log('Looks like we are in development mode!');
 }
 
-let containerDiv = new Div('container').getDiv();
-let weatherDiv = new Div('weather').getDiv();
+const containerDiv = new Div().create('container');
+const weatherDiv = new Div().create('weather');
 
-let button = addCityButton.getButton();
-let input = new Input("Enter your city...").getInput();
+let button = addCityButton.create('addCityBtn');
+let input = new Input('Enter your city...').create();
 
 weatherDiv.appendChild(input);
 weatherDiv.appendChild(button);
-
 containerDiv.appendChild(weatherDiv);
 
 const body = document.querySelector('body');
 body.appendChild(containerDiv);
 
 if (module.hot) {
-    module.hot.accept();
+	module.hot.accept();
 }
