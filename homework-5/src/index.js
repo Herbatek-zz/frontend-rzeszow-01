@@ -5,6 +5,7 @@ import Div from './div';
 import LocalStorage from './localStorage';
 import addCityTemperature from './cityTemperature';
 
+
 if (process.env.NODE_ENV !== 'production') {
 	console.log('Looks like we are in development mode!');
 }
@@ -12,19 +13,20 @@ if (process.env.NODE_ENV !== 'production') {
 const containerDiv = new Div().create('container');
 const weatherDiv = new Div().create('weather');
 
-let button = new Button('Add City', () => {
-	const input = document.querySelector('input');
-	addCityTemperature(input);
+const addCityButton = new Button('Add City', () => {
+	const userInput = document.querySelector('input');
+	addCityTemperature(userInput);
 }).create('addBtn');
-let input = new Input('Enter your city...').create();
+const inputField = new Input().create('Enter your city...');
 
-weatherDiv.appendChild(input);
-weatherDiv.appendChild(button);
+weatherDiv.appendChild(inputField);
+weatherDiv.appendChild(addCityButton);
 containerDiv.appendChild(weatherDiv);
 
 const body = document.querySelector('body');
 body.appendChild(containerDiv);
-let ls = new LocalStorage();
+
+const ls = new LocalStorage();
 document.addEventListener('DOMContentLoaded', ls.load());
 
 if (module.hot) {
