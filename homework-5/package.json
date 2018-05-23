@@ -6,14 +6,15 @@
     "private": true,
     "scripts": {
         "start": "webpack-dev-server --open --config webpack.dev.js",
-        "build": "webpack --config webpack.prod.js"
+        "build": "webpack --config webpack.prod.js",
+        "flow": "flow"
     },
     "author": "",
     "license": "ISC",
-    "dependencies": {
-    },
+    "dependencies": {},
     "devDependencies": {
-
+        "babel-cli": "^6.26.0",
+        "babel-preset-flow": "^6.23.0",
         "clean-webpack-plugin": "^0.1.19",
         "css-loader": "^0.28.11",
         "eslint": "^4.19.1",
@@ -23,6 +24,7 @@
         "eslint-plugin-promise": "^3.7.0",
         "eslint-plugin-standard": "^3.1.0",
         "file-loader": "^1.1.11",
+        "flow-bin": "^0.72.0",
         "html-webpack-plugin": "^3.2.0",
         "style-loader": "^0.21.0",
         "webpack": "^4.8.3",

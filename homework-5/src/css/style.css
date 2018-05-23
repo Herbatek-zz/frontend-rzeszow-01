@@ -1,3 +1,93 @@
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.weather {
+    width: 450px;
+    display: flex;
+}
+
+.weather:first-child {
+    display: inline;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .cityTemperature {
-    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid;
+}
+
+.removeBtn {
+    background-color: #f4511e;
+    border: none;
+    color: white;
+    padding: 6px 15px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    width: 80px;
+}
+
+.removeBtn:hover {
+    opacity: 1;
+}
+
+input {
+    width: 75%;
+    height: 35px;
+    font-size: 16px;
+    border-radius: 5px;
+    border-style: solid;
+    text-indent: 15px;
+    box-sizing: border-box;
+}
+
+input:hover {
+    border: 1px solid #3399ff;
+    box-shadow: 0 0 0px 3px #a2e1f7;
+}
+
+input:focus {
+    border: 1px solid #3399ff;
+    box-shadow: 0 0 0px 3px #a2efff;
+}
+
+.addBtn {
+    background-color: #3399ff;
+    border: none;
+    color: white;
+    padding: 6px 15px;
+    text-align: center;
+    font-size: 16px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    width: 100px;
+    height: 35px;
+}
+
+.addBtn:hover {
+    opacity: 1;
 }

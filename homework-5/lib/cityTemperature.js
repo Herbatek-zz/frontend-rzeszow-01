@@ -8,20 +8,22 @@ import createRemoveButton from './removeButton';
 export default function addCityTemperature(userInput) {
 	const p = new P();
 	const pCity = p.create(userInput.value);
+	const pArrow = p.create(' ===> ');
 
 	const tempReader = new TemperatureReader(userInput.value);
-	tempReader.readData(tempReader.getURL()).then(function(data) {
+	tempReader.readData(tempReader.getURL()).then(function (data) {
 		saveToLocalStorage(userInput);
 		userInput.value = '';
 
 		const temperatureDiv = new Div().create('cityTemperature');
 		temperatureDiv.appendChild(pCity);
-		const pValue = p.create(Math.round(averageTemperature(data)) + ' C');
+		temperatureDiv.appendChild(pArrow);
+		const pValue = p.create(Math.round(averageTemperature(data)) + 'C');
 		temperatureDiv.appendChild(pValue);
 		temperatureDiv.appendChild(createRemoveButton());
-		const listDiv = document.querySelector('.list');
-		listDiv.appendChild(temperatureDiv);
-	}).catch(function(err) {
+		const weather = document.querySelector('.weather');
+		weather.appendChild(temperatureDiv);
+	}).catch(function (err) {
 		alert(err);
 	});
 }

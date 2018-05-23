@@ -20,22 +20,23 @@ export default class LocalStorage {
 	load() {
 		if (readLocalStorage() !== null) {
 			const data = readLocalStorage();
-			const listDiv = document.querySelector('.list');
+			const weather = document.querySelector('.weather');
 			const p = new P();
-			for(let city of data) {
+			for (let city of data) {
 				const pCity = p.create(city);
-
+				const pArrow = p.create(' ===> ');
 
 				const tempReader = new TemperatureReader(city);
 
-				tempReader.readData(tempReader.getURL()).then(function(data) {
-					const pValue = p.create(Math.round(averageTemperature(data)) + ' °C');
+				tempReader.readData(tempReader.getURL()).then(function (data) {
+					const pValue = p.create(Math.round(averageTemperature(data)) + 'C');
 					const temperatureDiv = new Div().create('cityTemperature');
 					temperatureDiv.appendChild(pCity);
+					temperatureDiv.appendChild(pArrow);
 					temperatureDiv.appendChild(pValue);
 					temperatureDiv.appendChild(createRemoveButton());
-					listDiv.appendChild(temperatureDiv);
-				}).catch(function(err) {
+					weather.appendChild(temperatureDiv);
+				}).catch(function (err) {
 					alert(err);
 				});
 			}
