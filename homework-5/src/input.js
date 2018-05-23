@@ -9,6 +9,11 @@ export default class Input {
 		input.setAttribute('placeholder', placeholder);
 		input.required = true;
 		input.autofocus = true;
+		input.addEventListener('keyup', (e) => {
+			if(e.keyCode === 13) {
+				document.querySelector('.addBtn').click();
+			}
+		});
 		return input;
 	}
 }
