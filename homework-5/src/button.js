@@ -1,3 +1,4 @@
+// @flow
 export default class Button {
 	constructor(text, action) {
 		this.text = text;

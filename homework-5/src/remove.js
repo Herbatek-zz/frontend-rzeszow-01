@@ -1,3 +1,4 @@
+// @flow
 import readLocalStorage from './readLocalStorage';
 
 export default function removeCity(button) {

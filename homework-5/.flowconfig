@@ -1,5 +1,5 @@
 [ignore]
-    ./node_modules
+    .*/node_modules/*
 [include]
 
 [libs]
@@ -7,7 +7,6 @@
 [lints]
 
 [options]
-    all=true
     emoji=true
 
 [strict]

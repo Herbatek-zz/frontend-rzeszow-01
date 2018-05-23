@@ -1,3 +1,4 @@
+// @flow
 import Div from './div';
 import P from './p';
 import TemperatureReader from './temperatureReader';

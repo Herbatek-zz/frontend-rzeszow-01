@@ -1,3 +1,4 @@
+// @flow
 export default class TemperatureReader {
 	constructor(cityName) {
 		this.key = 'e1a44da8538605c35264672d30ae1d12';

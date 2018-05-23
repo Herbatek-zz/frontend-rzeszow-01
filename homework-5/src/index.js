@@ -1,3 +1,4 @@
+// @flow
 import './css/style.css';
 import Button from './button';
 import Input from './input';

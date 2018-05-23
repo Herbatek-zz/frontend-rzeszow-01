@@ -1,3 +1,4 @@
+// @flow
 import Button from './button';
 import removeCity from './remove';
 

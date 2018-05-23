@@ -1,3 +1,4 @@
+// @flow
 export default class Div {
 	constructor() {
 		this.type = 'div';

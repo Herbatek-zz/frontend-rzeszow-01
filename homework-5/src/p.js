@@ -1,3 +1,4 @@
+// @flow
 export default class P {
 	constructor() {
 		this.type = 'p';
